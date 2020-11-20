@@ -231,7 +231,10 @@ def taylor_to_weight_mat(_taylor):
 
     state_vectors, index = getKronPowers(coords,degree,dim_reduction=False)
     
-#     print(state_vectors)
+#     print(_taylor)
+#     print(coords)
+    
+    #print(state_vectors)
 
     W = []
 
@@ -249,6 +252,7 @@ def taylor_to_weight_mat(_taylor):
                 coeff = taylor_sub.coeff_monomial(state_vector)
 
                 if coeff != 0 and flag == True:
+#                     print(coeff)
                     w_sub[j,k] = coeff
         W.append(w_sub.T)
     
